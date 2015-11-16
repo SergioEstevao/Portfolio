@@ -1,11 +1,3 @@
-//
-//  SergioEstevaoTests.swift
-//  SergioEstevaoTests
-//
-//  Created by Sergio Estevao on 12/11/2015.
-//  Copyright © 2015 Sergio Estevao. All rights reserved.
-//
-
 import XCTest
 @testable import SergioEstevao
 
