@@ -72,7 +72,7 @@ public class PageEndpoints {
         let title:String = try titleDictionary.objectForKey("rendered")
         let contentDictionary:[String:AnyObject] = try json.objectForKey("content")
         let content:String = try contentDictionary.objectForKey("rendered");
-        let date:NSDate = try json.dateForKey("date", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
+        let date:NSDate = try json.dateForKey("date_gmt", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
         
         return Page(id: id.integerValue, title: title, content: content, date: date)
     }    

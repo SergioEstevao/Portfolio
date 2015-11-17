@@ -76,7 +76,7 @@ public class PostEndpoints {
         let title:String = try titleDictionary.objectForKey("rendered")
         let contentDictionary:[String:AnyObject] = try jsonDictionary.objectForKey("content")
         let content:String = try contentDictionary.objectForKey("rendered");
-        let date:NSDate = try jsonDictionary.dateForKey("date", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
+        let date:NSDate = try jsonDictionary.dateForKey("date_gmt", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
         let featuredImage:NSNumber = try jsonDictionary.objectForKey("featured_image")
         return Post(id: id.integerValue, title: title, content: content, date: date, featuredImage: featuredImage.integerValue)
     }

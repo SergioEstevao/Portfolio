@@ -73,7 +73,7 @@ public class MediaEndpoints {
         let titleDictionary:[String:AnyObject] = try jsonDictionary.objectForKey("title")
         let title:String = try titleDictionary.objectForKey("rendered")
         let description:String = try jsonDictionary.objectForKey("description")
-        let date:NSDate = try jsonDictionary.dateForKey("date", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
+        let date:NSDate = try jsonDictionary.dateForKey("date_gmt", dateFormatter:NSDateFormatterCache.ISO8601Formatter)
         let sourceURL:String = try jsonDictionary.objectForKey("source_url")
         return Media(id: id.integerValue, title: title, description: description, date: date, sourceURL: sourceURL)
     }
