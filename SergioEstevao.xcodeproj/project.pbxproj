@@ -89,6 +89,7 @@
 		FF4F068C1BF61AA800D36F52 /* contentTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contentTemplate.html; sourceTree = "<group>"; };
 		FF4F068E1BF7FA8500D36F52 /* MediaEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaEndpoints.swift; sourceTree = "<group>"; };
 		FF4F06901BF7FB8400D36F52 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FF9B460A1BFB4053004A272C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +138,7 @@
 		FF4F06201BF507D700D36F52 = {
 			isa = PBXGroup;
 			children = (
+				FF9B460A1BFB4053004A272C /* README.md */,
 				FF4F062B1BF507D700D36F52 /* SergioEstevao */,
 				FF4F06401BF507D700D36F52 /* SergioEstevaoTests */,
 				FF4F064B1BF507D700D36F52 /* SergioEstevaoUITests */,
