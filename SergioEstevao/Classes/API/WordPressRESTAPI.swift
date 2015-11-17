@@ -24,4 +24,8 @@ public class WordPressRESTAPI {
         return MediaEndpoints(manager: self.manager, baseURL: self.siteURL)
     }()
 
+    public lazy var commentsEndpoints: CommentsEndpoints = {
+        return CommentsEndpoints(manager: self.manager, baseURL: self.siteURL)
+    }()
+
 }
