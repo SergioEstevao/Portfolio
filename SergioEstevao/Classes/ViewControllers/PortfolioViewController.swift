@@ -62,8 +62,9 @@ class PortfolioViewController: UITableViewController {
                 if (cell.post?.featuredImage == media.id) {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         let URL = NSURL(string:media.sourceURL)!
-                        let filter = ScaledToSizeFilter(
-                            size: CGSize(width: tableView.rowHeight, height: tableView.rowHeight)
+                        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+                            size: CGSize(width: tableView.rowHeight, height: tableView.rowHeight),
+                            radius:  2.0
                         )
                         cell.imageView?.af_setImageWithURLRequest(NSURLRequest(URL: URL), placeholderImage: UIImage(imageLiteral: "ImagePlaceholder"), filter: filter, imageTransition: .None, completion: { (response) -> Void in                            
                         })
