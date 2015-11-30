@@ -80,7 +80,10 @@ class AboutViewController: UIViewController {
             }
             let commentObj = Comment(postID: self.dynamicType.contactPageID, authorEmail: email, authorName: name, content: comment)
             self.api.commentsEndpoints.create(commentObj, success: { (resultComment) -> () in
-
+                    let alert = UIAlertController(title:"Thank you for your message.", message: "I will get back to you as soon as possible.", preferredStyle:.Alert)
+                    let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated:true, completion:nil)
                 }, failure: { (error) -> () in
                     let alert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle:.Alert)
                     let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
