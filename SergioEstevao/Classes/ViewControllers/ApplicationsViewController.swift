@@ -44,7 +44,7 @@ class ApplicationsViewController: UIViewController {
     }
     
     func refreshData() {
-        api.pagesEndpoints.retrieve(id: self.dynamicType.pageID, success: { (page) -> () in
+        api.pagesEndpoints.retrieve(self.dynamicType.pageID, success: { (page) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.showPage(page);
             })

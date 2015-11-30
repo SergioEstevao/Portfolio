@@ -12,7 +12,6 @@
 		FF4F064D1BF507D700D36F52 /* SergioEstevaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F064C1BF507D700D36F52 /* SergioEstevaoUITests.swift */; };
 		FF4F066B1BF509BC00D36F52 /* NSDateFormatterCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F065C1BF509BC00D36F52 /* NSDateFormatterCache.swift */; };
 		FF4F066C1BF509BC00D36F52 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F065D1BF509BC00D36F52 /* Post.swift */; };
-		FF4F066D1BF509BC00D36F52 /* PostEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F065E1BF509BC00D36F52 /* PostEndpoints.swift */; };
 		FF4F066E1BF509BC00D36F52 /* WordPressRESTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F065F1BF509BC00D36F52 /* WordPressRESTAPI.swift */; };
 		FF4F066F1BF509BC00D36F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06601BF509BC00D36F52 /* AppDelegate.swift */; };
 		FF4F06701BF509BC00D36F52 /* Dictionary+JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06621BF509BC00D36F52 /* Dictionary+JSONParser.swift */; };
@@ -27,15 +26,13 @@
 		FF4F067F1BF509D800D36F52 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = FF4F067C1BF509D800D36F52 /* style.css */; };
 		FF4F06811BF55B8700D36F52 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06801BF55B8700D36F52 /* BlogViewController.swift */; };
 		FF4F06831BF5641D00D36F52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4F06821BF5641D00D36F52 /* Images.xcassets */; };
-		FF4F06851BF5668C00D36F52 /* PageEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06841BF5668C00D36F52 /* PageEndpoints.swift */; };
 		FF4F06871BF5681000D36F52 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06861BF5681000D36F52 /* Page.swift */; };
 		FF4F06891BF5FC6D00D36F52 /* UIImage+TextInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06881BF5FC6D00D36F52 /* UIImage+TextInit.swift */; };
 		FF4F068B1BF6048700D36F52 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F068A1BF6048700D36F52 /* StyleGuide.swift */; };
 		FF4F068D1BF61AA800D36F52 /* contentTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = FF4F068C1BF61AA800D36F52 /* contentTemplate.html */; };
-		FF4F068F1BF7FA8500D36F52 /* MediaEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F068E1BF7FA8500D36F52 /* MediaEndpoints.swift */; };
 		FF4F06911BF7FB8400D36F52 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06901BF7FB8400D36F52 /* Media.swift */; };
-		FF9B460C1BFB59B8004A272C /* CommentsEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B460B1BFB59B8004A272C /* CommentsEndpoints.swift */; };
 		FF9B460E1BFB5A28004A272C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B460D1BFB5A28004A272C /* Comment.swift */; };
+		FFC661711C0CF31800AA7661 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC661701C0CF31800AA7661 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +66,6 @@
 		FF4F064E1BF507D700D36F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF4F065C1BF509BC00D36F52 /* NSDateFormatterCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateFormatterCache.swift; sourceTree = "<group>"; };
 		FF4F065D1BF509BC00D36F52 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		FF4F065E1BF509BC00D36F52 /* PostEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEndpoints.swift; sourceTree = "<group>"; };
 		FF4F065F1BF509BC00D36F52 /* WordPressRESTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressRESTAPI.swift; sourceTree = "<group>"; };
 		FF4F06601BF509BC00D36F52 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4F06621BF509BC00D36F52 /* Dictionary+JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSONParser.swift"; sourceTree = "<group>"; };
@@ -84,16 +80,14 @@
 		FF4F067C1BF509D800D36F52 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		FF4F06801BF55B8700D36F52 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		FF4F06821BF5641D00D36F52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FF4F06841BF5668C00D36F52 /* PageEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageEndpoints.swift; sourceTree = "<group>"; };
 		FF4F06861BF5681000D36F52 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		FF4F06881BF5FC6D00D36F52 /* UIImage+TextInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TextInit.swift"; sourceTree = "<group>"; };
 		FF4F068A1BF6048700D36F52 /* StyleGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		FF4F068C1BF61AA800D36F52 /* contentTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contentTemplate.html; sourceTree = "<group>"; };
-		FF4F068E1BF7FA8500D36F52 /* MediaEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaEndpoints.swift; sourceTree = "<group>"; };
 		FF4F06901BF7FB8400D36F52 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FF9B460A1BFB4053004A272C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FF9B460B1BFB59B8004A272C /* CommentsEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsEndpoints.swift; sourceTree = "<group>"; };
 		FF9B460D1BFB5A28004A272C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FFC661701C0CF31800AA7661 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,11 +203,8 @@
 				FF4F06901BF7FB8400D36F52 /* Media.swift */,
 				FF9B460D1BFB5A28004A272C /* Comment.swift */,
 				FF4F06861BF5681000D36F52 /* Page.swift */,
-				FF4F065E1BF509BC00D36F52 /* PostEndpoints.swift */,
-				FF4F068E1BF7FA8500D36F52 /* MediaEndpoints.swift */,
-				FF9B460B1BFB59B8004A272C /* CommentsEndpoints.swift */,
-				FF4F06841BF5668C00D36F52 /* PageEndpoints.swift */,
 				FF4F065F1BF509BC00D36F52 /* WordPressRESTAPI.swift */,
+				FFC661701C0CF31800AA7661 /* Route.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -441,13 +432,11 @@
 				FF4F06711BF509BC00D36F52 /* NSAttributedString+HTML.swift in Sources */,
 				FF4F06871BF5681000D36F52 /* Page.swift in Sources */,
 				FF4F06701BF509BC00D36F52 /* Dictionary+JSONParser.swift in Sources */,
-				FF4F066D1BF509BC00D36F52 /* PostEndpoints.swift in Sources */,
-				FF9B460C1BFB59B8004A272C /* CommentsEndpoints.swift in Sources */,
 				FF4F06771BF509BC00D36F52 /* RootViewController.swift in Sources */,
 				FF4F066B1BF509BC00D36F52 /* NSDateFormatterCache.swift in Sources */,
 				FF4F06811BF55B8700D36F52 /* BlogViewController.swift in Sources */,
+				FFC661711C0CF31800AA7661 /* Route.swift in Sources */,
 				FF9B460E1BFB5A28004A272C /* Comment.swift in Sources */,
-				FF4F068F1BF7FA8500D36F52 /* MediaEndpoints.swift in Sources */,
 				FF4F068B1BF6048700D36F52 /* StyleGuide.swift in Sources */,
 				FF4F06751BF509BC00D36F52 /* PortfolioViewController.swift in Sources */,
 				FF4F06891BF5FC6D00D36F52 /* UIImage+TextInit.swift in Sources */,
@@ -458,7 +447,6 @@
 				FF4F06731BF509BC00D36F52 /* ApplicationsViewController.swift in Sources */,
 				FF4F066C1BF509BC00D36F52 /* Post.swift in Sources */,
 				FF4F06761BF509BC00D36F52 /* PostTableViewCell.swift in Sources */,
-				FF4F06851BF5668C00D36F52 /* PageEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

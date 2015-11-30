@@ -95,7 +95,7 @@ class PortfolioViewController: UITableViewController {
     }
     
     func refreshData() {
-        api.postsEndpoints.list(category:"Portfolio", success: { (posts) -> () in
+        api.postsEndpoints.list(filters:["category_name":"Portfolio"], success: { (posts) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.items = posts;
                 self.tableView.reloadData()

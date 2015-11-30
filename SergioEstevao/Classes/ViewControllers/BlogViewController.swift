@@ -97,7 +97,7 @@ class BlogViewController: UITableViewController {
     }
     
     func refreshData() {
-        api.postsEndpoints.list(category:"Blog", success: { (posts) -> () in
+        api.postsEndpoints.list(filters:["category_name":"Blog"], success: { (posts) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.items = posts;
                 self.tableView.reloadData()

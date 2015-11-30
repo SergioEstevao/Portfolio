@@ -12,20 +12,20 @@ public class WordPressRESTAPI {
         return Alamofire.Manager()
     }()
     
-    public lazy var postsEndpoints: PostEndpoints = {
-        return PostEndpoints(manager: self.manager, baseURL: self.siteURL)
+    public lazy var postsEndpoints: Route<Post> = {
+        return Route<Post>(manager: self.manager, baseURL: self.siteURL, path: "posts")
     }()
     
-    public lazy var pagesEndpoints: PageEndpoints = {
-        return PageEndpoints(manager: self.manager, baseURL: self.siteURL)
+    public lazy var pagesEndpoints: Route<Page> = {
+        return Route<Page>(manager: self.manager, baseURL: self.siteURL, path: "pages")
     }()
 
-    public lazy var mediaEndpoints: MediaEndpoints = {
-        return MediaEndpoints(manager: self.manager, baseURL: self.siteURL)
+    public lazy var mediaEndpoints: Route<Media> = {
+        return Route<Media>(manager: self.manager, baseURL: self.siteURL, path: "media")
     }()
 
-    public lazy var commentsEndpoints: CommentsEndpoints = {
-        return CommentsEndpoints(manager: self.manager, baseURL: self.siteURL)
+    public lazy var commentsEndpoints: Route<Comment> = {
+        return Route<Comment>(manager: self.manager, baseURL: self.siteURL, path: "comments")
     }()
 
 }
