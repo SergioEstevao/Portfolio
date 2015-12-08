@@ -2,44 +2,23 @@ import Foundation
 
 /// Class for handling parsing errors
 ///
-class DictionaryObjectForKeyError: NSError {
+/// The error codes for this domain.
+///
+enum JSONParserDictionaryErrorCode : Int,ErrorEnum {
+    case MissingKey = 1
+    case DateConversionFailed = 2
     
-    // MARK: - Error domain and codes
-    
-    /// The error domain for this class.
-    ///
-    static let domain = "org.wordpress.rest.api.errorDomain"
-    
-    /// The error codes for this domain.
-    ///
-    enum ErrorCode : Int {
-        case MissingKey = 1
-        case DateConversionFailed = 2
-        func localizedFailureReason<T>(key: T) -> String {
-            switch self {
-            case MissingKey:
-                return "Missing \(key) element in response."
-            case DateConversionFailed:
-                return "Failed to convert \(key) to date."
-            }
+    func localizedFailureReason(argument: String) -> String {
+        switch self {
+        case MissingKey:
+            return "Missing \(argument) element in response."
+        case DateConversionFailed:
+            return "Failed to convert \(argument) to date."
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    /// This is the initializer that callers should use.
-    ///
-    /// - Parameters:
-    ///     - errorCode: the code of the error.  The error's description will be filled in
-    ///             automatically.
-    ///     - relatedKey: which key triggered the error.
-    ///
-    init<T>(errorCode: ErrorCode, relatedKey: T) {
-        let userInfo = [NSLocalizedFailureReasonErrorKey: errorCode.localizedFailureReason(relatedKey)]
-        
-        super.init(domain: self.dynamicType.domain, code: errorCode.rawValue, userInfo: userInfo)
+    func domain() -> String {
+        return "org.wordpress.rest.api.JSONParserDictionaryErrorCode"
     }
 }
 
@@ -56,7 +35,7 @@ extension Dictionary {
     func objectForKey<T>(key: Key) throws -> T {
         
         guard let object = self[key] as? T else {
-            throw DictionaryObjectForKeyError(errorCode: .MissingKey, relatedKey: key)
+            throw NSError(errorCode: JSONParserDictionaryErrorCode.MissingKey, argument: "\(key)")
         }
         
         return object
@@ -75,10 +54,10 @@ extension Dictionary {
     func dateForKey(key: Key, dateFormatter:NSDateFormatter) throws -> NSDate {
         
         guard let dateString = self[key] as? String else {
-            throw DictionaryObjectForKeyError(errorCode: .MissingKey, relatedKey: key)
+            throw NSError(errorCode: JSONParserDictionaryErrorCode.MissingKey, argument: "\(key)")
         }
         guard let date = dateFormatter.dateFromString(dateString) else {
-            throw DictionaryObjectForKeyError(errorCode: .DateConversionFailed, relatedKey: key)
+            throw NSError(errorCode: JSONParserDictionaryErrorCode.DateConversionFailed, argument: "\(key)")
         }
         
         return date

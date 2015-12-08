@@ -32,6 +32,7 @@
 		FF4F068D1BF61AA800D36F52 /* contentTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = FF4F068C1BF61AA800D36F52 /* contentTemplate.html */; };
 		FF4F06911BF7FB8400D36F52 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F06901BF7FB8400D36F52 /* Media.swift */; };
 		FF9B460E1BFB5A28004A272C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B460D1BFB5A28004A272C /* Comment.swift */; };
+		FFAE27151C16437A00403EDE /* NSError+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAE27141C16437A00403EDE /* NSError+Enum.swift */; };
 		FFC661711C0CF31800AA7661 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC661701C0CF31800AA7661 /* Route.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		FF4F06901BF7FB8400D36F52 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FF9B460A1BFB4053004A272C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF9B460D1BFB5A28004A272C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FFAE27141C16437A00403EDE /* NSError+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Enum.swift"; sourceTree = "<group>"; };
 		FFC661701C0CF31800AA7661 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 				FF4F06861BF5681000D36F52 /* Page.swift */,
 				FF4F065F1BF509BC00D36F52 /* WordPressRESTAPI.swift */,
 				FFC661701C0CF31800AA7661 /* Route.swift */,
+				FFAE27141C16437A00403EDE /* NSError+Enum.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				FF4F066B1BF509BC00D36F52 /* NSDateFormatterCache.swift in Sources */,
 				FF4F06811BF55B8700D36F52 /* BlogViewController.swift in Sources */,
 				FFC661711C0CF31800AA7661 /* Route.swift in Sources */,
+				FFAE27151C16437A00403EDE /* NSError+Enum.swift in Sources */,
 				FF9B460E1BFB5A28004A272C /* Comment.swift in Sources */,
 				FF4F068B1BF6048700D36F52 /* StyleGuide.swift in Sources */,
 				FF4F06751BF509BC00D36F52 /* PortfolioViewController.swift in Sources */,

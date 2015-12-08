@@ -32,7 +32,7 @@ public class Route<T:JSONSerialization> {
                 switch response.result {
                 case .Success(let value):
                     guard let jsonArray = value as? Array<[String:AnyObject]> else {
-                        failure(SerializationError(errorCode: .InvalidJSONFormat))
+                        failure(NSError(errorCode: RouteError.InvalidJSONFormat))
                         return
                     }
                     var result = Array<T>()
@@ -64,7 +64,7 @@ public class Route<T:JSONSerialization> {
                 switch response.result {
                 case .Success(let value):
                     guard let jsonDictionary = value as? [String:AnyObject] else {
-                        failure(SerializationError(errorCode: .InvalidJSONFormat))
+                        failure(NSError(errorCode: RouteError.InvalidJSONFormat))
                         return
                     }
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
@@ -100,7 +100,7 @@ public class Route<T:JSONSerialization> {
                 switch response.result {
                 case .Success(let value):
                     guard let jsonDictionary = value as? [String:AnyObject] else {
-                        failure(SerializationError(errorCode: .InvalidJSONFormat))
+                        failure(NSError(errorCode: RouteError.InvalidJSONFormat))
                         return
                     }
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
@@ -122,39 +122,21 @@ public class Route<T:JSONSerialization> {
     }
 }
 
-class SerializationError: NSError {
-    
-    // MARK: - Error domain and codes
-    
-    /// The error domain for this class.
-    ///
-    static let domain = "org.wordpress.rest.api.errorDomain"
-    
-    /// The error codes for this domain.
-    ///
-    enum ErrorCode : Int {
-        case InvalidJSONFormat = 1
-        func localizedFailureReason() -> String {
-            switch self {
-            case InvalidJSONFormat:
-                return "JSON isn't the expected format"
-            }
+/// The error codes for this domain.
+///
+enum RouteError : Int,ErrorEnum {
+    case InvalidJSONFormat = 1
+
+    func localizedFailureReason(argument:String) -> String {
+        switch self {
+        case InvalidJSONFormat:
+            return "JSON isn't the expected format"
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    /// This is the initializer that callers should use.
+    /// The error domain for this class.
     ///
-    /// - Parameters:
-    ///     - errorCode: the code of the error.  The error's description will be filled in
-    ///             automatically.
-    ///
-    init(errorCode: ErrorCode) {
-        let userInfo = [NSLocalizedFailureReasonErrorKey: errorCode.localizedFailureReason()]
-        
-        super.init(domain: self.dynamicType.domain, code: errorCode.rawValue, userInfo: userInfo)
+    func domain() -> String {
+        return "org.wordpress.rest.api.errorDomain"
     }
 }
